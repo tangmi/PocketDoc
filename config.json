@@ -3,6 +3,11 @@
 	"charts": "My charts",
 	"measure": "Take measurement",
 	"contact": "Contact your doctor",
+	"contact-voice": "Send your doctor a voice message",
+	"contact-text": "Send your doctor a text message",
+	"contact-video": "Send your doctor a video message",
 	"appointment": "Schedule an appointment",
-	"appointment-new": "New appointment"
+	"appointment-new": "New appointment",
+	"appointment-view-populated": "View Appointments",
+	"appointment-view-unpopulated": "View Appointments",
 }
