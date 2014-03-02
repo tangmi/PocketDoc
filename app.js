@@ -50,6 +50,7 @@ app.get('/:page', function(req, res) {
 });
 
 function render(page, res) {	
+
 	res.locals = {
 		title: require('./config')[page],
 		page: page

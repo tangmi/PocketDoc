@@ -1,22 +1,26 @@
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,600");
 
+html, body {
+	height: 100%;
+}
+
 body {
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
 }
 
-@mixin pad {
-	padding-left: 10px;
-	padding-right: 10px;
+#wrapper {
+	height: 100%;
+	position: relative;
 }
 
 header {
+	margin-bottom: 10px;
 
 	#title {
 		$font-size: 16px;
 		// border-bottom: 1px solid gray;
 		padding-top: 10px;
-		@include pad;
 
 		h1 {
 			display: inline-block;
@@ -40,7 +44,6 @@ header {
 	#location {
 		border-bottom: 1px solid gray;
 		padding-bottom: 5px;
-		@include pad;
 
 		h2 {
 			font-weight: bold;
@@ -51,8 +54,94 @@ header {
 }
 
 main {
-	ul>li {
-		a {
+	ul {
+		&.menu {
+			list-style: none;
+			padding: 0;
+
+			li {
+				margin: 0 0 5px;
+
+				a {
+					display: inline-block;
+					width: 100%;
+
+
+					text-align: left;
+
+					h3 {
+						font-size: 1em;
+						margin: 0;
+						font-weight: bold;
+					}
+
+					p {
+						margin: 0;
+						font-size: 0.75em;
+						white-space: normal;
+					}
+				}
+			}
+		}
+
+		li {
+			a {
+			}
+		}
+	}
+
+	.btn {
+		font-size: 1.5em;
+	}
+
+	.btn-cancel {
+		position: absolute;
+		right: 15px;
+		bottom: 15px;
+	}
+
+	.calendar {
+
+		h3 {
+			text-align: center;
+		}
+
+		td {
+			font-size: 2em;
+			text-align: center;
+			opacity: 0.5;
+
+			&.gray {
+				color: rgba(1, 1, 1, 0.5);
+			}
+
+			&.bg-info {
+				opacity: 1;
+				color: #428BCA;
+			}
+
+			&.open a {
+				display: block;
+				text-decoration: none;
+				color: inherit;
+
+				&:active {
+					background: #428BCA;
+					color: white;
+				}
+			}
+		}
+	}
+
+	h3 {
+		margin-top: 0;
+	}
+
+	&#content-appointment-picktime {
+
+
+		.time-selection.open {
+			
 		}
 	}
 }

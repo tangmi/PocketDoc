@@ -9,8 +9,6 @@
 
 	<!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"> -->
 
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-
 	<link rel="stylesheet" href="stylesheets/style.css">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -30,7 +28,7 @@
 			<section id="title">
 				<h1>PocketDoc</h1>
 				<nav>
-					<a class="btn btn-default" href="#">Home</a>
+					<a class="btn btn-default" href="/">Home</a>
 					<a class="btn btn-default" href="#">Help</a>
 				</nav>
 			</section>
@@ -46,15 +44,28 @@
 	</div>
 
 	<script>
-	document.ontouchstart = function(e){ 
-	    e.preventDefault(); 
-	}
-	// Hides mobile browser's address bar when page is done loading.
-	// window.addEventListener('load', function(e) {
-	// 	setTimeout(function() {
-	// 		window.scrollTo(0, 1);
-	// 	}, 1);
-	// }, false);
-</script>
+		// prevent scrolling
+		document.ontouchmove = function(e) { 
+		    e.preventDefault(); 
+		};
+
+		// prevent opening in a new page
+		var a = document.getElementsByTagName("a");
+		for (var i = 0; i < a.length; i++) {
+			a[i].onclick = function() {
+				window.location = this.getAttribute("href");
+				return false;
+			}
+		}
+
+		// Hides mobile browser's address bar when page is done loading.
+		// window.addEventListener('load', function(e) {
+		// 	setTimeout(function() {
+		// 		window.scrollTo(0, 1);
+		// 	}, 1);
+		// }, false);
+	</script>
+
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -3,6 +3,7 @@
 	"charts": "My charts",
 	"measure": "Take measurement",
 	"contact": "Contact your doctor",
-	"appointment": "Schedule an appointment",
-	"appointment-new": "New appointment"
+	"appointment-noupcoming": "Appointments",
+	"appointment-new": "Pick an appointment date",
+	"appointment-picktime": "Pick an appointment time"
 }
