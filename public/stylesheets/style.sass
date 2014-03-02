@@ -1,0 +1,72 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,600");
+
+body {
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+@mixin pad {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+@mixin button {
+	display: inline-block;
+	padding: 10px 15px;
+	border: 1px solid;
+	border-radius: 5px;
+	text-decoration: none;
+
+	&:active {
+		background-color: lightblue;
+	}
+}
+
+header {
+
+	#title {
+		$font-size: 16px;
+		// border-bottom: 1px solid gray;
+		padding-top: 10px;
+		@include pad;
+
+		h1 {
+			display: inline-block;
+			margin: 0;
+			font-weight: normal;
+			font-size: $font-size;
+		}
+
+		nav {
+			float: right;
+			display: inline-block;
+			font-size: $font-size;
+			margin-top: 5px;
+
+			a {
+				@include button;
+			}
+
+		}
+	}
+
+	#location {
+		border-bottom: 1px solid gray;
+		padding-bottom: 5px;
+		@include pad;
+
+		h2 {
+			font-weight: bold;
+			font-size: 24px;
+			margin: 0;
+		}
+	}
+}
+
+main {
+	ul>li {
+		a {
+			@include button;
+		}
+	}
+}
