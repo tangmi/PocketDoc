@@ -5,5 +5,10 @@
 	"contact": "Contact your doctor",
 	"appointment-noupcoming": "Appointments",
 	"appointment-new": "Pick an appointment date",
-	"appointment-picktime": "Pick an appointment time"
+	"appointment-picktime": "Pick an appointment time",
+	"contact-voice": "Send your doctor a voice message",
+	"contact-text": "Send your doctor a text message",
+	"contact-video": "Send your doctor a video message",
+	"appointment-view-populated": "Appointments",
+	"appointment-view-unpopulated": "Appointments"
 }
