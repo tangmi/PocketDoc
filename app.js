@@ -31,7 +31,7 @@ app.get('/stylesheets/style.css', function(req, res) {
 	var sass = require('node-sass');
 	res.setHeader('Content-Type', 'text/css');
 	sass.render({
-		file: __dirname + '/public/stylesheets/style.sass',
+		file: __dirname + '/public/stylesheets/style.scss',
 		includePaths: [__dirname + '/public/stylesheets'],
 		outputStyle: 'compressed',
 		success: function(css) {
