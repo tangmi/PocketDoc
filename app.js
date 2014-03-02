@@ -8,10 +8,12 @@ var path = require('path');
 
 var app = express();
 
+app.engine('html', require('hogan-express'));
+
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hjs');
+app.set('view engine', 'html');
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.json());
@@ -30,13 +32,37 @@ app.get('/stylesheets/style.css', function(req, res) {
 	res.setHeader('Content-Type', 'text/css');
 	sass.render({
 		file: __dirname + '/public/stylesheets/style.sass',
-		includePaths: [ __dirname + '/public/stylesheets' ],
+		includePaths: [__dirname + '/public/stylesheets'],
 		outputStyle: 'compressed',
 		success: function(css) {
 			res.send(css);
 		}
 	});
 });
+
+app.get('/', function(req, res) {
+	render('home', res);
+});
+
+app.get('/:page', function(req, res) {
+	var page = req.params.page;
+	render(page, res);
+});
+
+function render(page, res) {	
+	res.locals = {
+		title: require('./config')[page],
+		page: page
+	};
+
+	return res.render(
+		'index', {
+			partials: {
+				part: page,
+			}
+		}
+	);
+}
 
 
 

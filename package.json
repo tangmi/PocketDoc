@@ -8,6 +8,6 @@
   "dependencies": {
     "express": "3.4.7",
     "node-sass": "*",
-    "hjs": "*"
+    "hogan-express": "~0.5.2"
   }
 }
