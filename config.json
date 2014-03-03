@@ -1,6 +1,7 @@
 {
 	"home": "Home",
-	"charts": "My charts",
+	"charts-pickchart": "My charts",
+	"charts-bloodpressure": "My charts",
 	"measure": "Take measurement",
 	"contact": "Contact your doctor",
 	"appointment-noupcoming": "Appointments",
