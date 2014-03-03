@@ -120,16 +120,23 @@ main {
 				color: #428BCA;
 			}
 
-			&.open a {
-				display: block;
-				text-decoration: none;
-				color: inherit;
+		}
+	}
 
-				&:active {
-					background: #428BCA;
-					color: white;
-				}
+	td {
+		&.open a {
+			display: block;
+			text-decoration: none;
+			color: inherit;
+
+			&:active {
+				color: white;
 			}
+		}
+
+		&:active {
+			background: #428BCA;
+			color: white;
 		}
 	}
 
