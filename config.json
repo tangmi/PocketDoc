@@ -1,6 +1,7 @@
 {
 	"home": "Home",
-	"charts": "My charts",
+	"charts-pickchart": "My charts",
+	"charts-bloodpressure": "My charts",
 	"measure": "Take measurement",
 	"contact": "Contact your doctor",
 	"appointment-noupcoming": "Appointments",
@@ -12,6 +13,6 @@
 	"contact-audio-new": "Send your doctor a voice message",
 	"contact-text": "Send your doctor a text message",
 	"contact-video": "Send your doctor a video message",
-	"appointment-view-populated": "Appointments",
-	"appointment-view-unpopulated": "Appointments"
+	"appointment-view-populated": "Your appointments",
+	"appointment-view-unpopulated": "Your appointments"
 }
