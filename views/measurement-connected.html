@@ -1,0 +1,15 @@
+<h3>Measurement in progress...</h3>
+<progress id="progress-bar" value="0" max="100"></progress>
+<h3>Please remain still...</h3>
+<script type="text/javascript">
+	var prog = document.getElementById('progress-bar');
+	for (var p = 0; p <= 100; p++) {
+		setTimeout( function(){
+			prog.value += 1;
+			console.log(p);
+		}, p * 100);
+	}
+	setTimeout(function() {
+		window.location.href += "-complete";
+	}, 105 * 100);
+</script>
