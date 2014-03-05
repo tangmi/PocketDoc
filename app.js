@@ -41,7 +41,7 @@ app.get('/stylesheets/style.css', function(req, res) {
 });
 
 app.get('/', function(req, res) {
-	render('home', res);
+	render('login', res);
 });
 
 app.get('/:page', function(req, res) {
