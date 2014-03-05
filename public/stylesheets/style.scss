@@ -9,6 +9,10 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+#doc-logo {
+	width: 30px;
+}
+
 #wrapper {
 	height: 100%;
 	position: relative;
@@ -169,6 +173,10 @@ main {
 	}
 	.appointment-big {
 		font-weight: bold;
+	}
+
+	select {
+		width: 100%;
 	}
 
 	&#content-appointment-picktime {
