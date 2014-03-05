@@ -56,6 +56,11 @@ function render(page, res) {
 		page: page
 	};
 
+	if(!require('fs').existsSync(__dirname + '/views/' + page + '.html')) {
+		res.setHeader('Content-Type', 'text/plain');
+		return res.send('views/' + page + '.html not found');
+	}
+
 	return res.render(
 		'index', {
 			partials: {

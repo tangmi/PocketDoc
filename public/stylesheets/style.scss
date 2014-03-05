@@ -93,13 +93,20 @@ main {
 	.btn {
 		font-size: 1.5em;
 		display: block;
-		margin: 5px;
+		margin: 5px 0;
 	}
 
-	.btn-cancel {
-		position: absolute;
-		right: 15px;
-		bottom: 15px;
+	@media all and (min-height: 300px) {
+		.btn-cancel {
+			position: absolute;
+			right: 15px;
+			bottom: 15px;
+		}
+	}
+
+	.measurement-big {
+		font-weight: bold;
+		font-size: 2em;
 	}
 
 	.calendar {
@@ -151,11 +158,28 @@ main {
 		margin-top: 0;
 	}
 
+	.time-selection {
+		padding: 0.5em 0;
+		font-size: 1.5em;
+	}
+
+	.appointment-center {
+		text-align: center;
+		padding: 1em 0;
+	}
+	.appointment-big {
+		font-weight: bold;
+	}
+
 	&#content-appointment-picktime {
 
 
 		.time-selection.open {
 			
 		}
+	}
+
+	select {
+		font-size: 2em;
 	}
 }
