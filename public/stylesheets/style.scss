@@ -6,7 +6,18 @@ html, body {
 
 body {
 	margin: 0;
-	font-family: 'Open Sans', sans-serif;
+	// font-family: 'Open Sans', sans-serif;
+	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+//for the fixed navbar
+body { padding-top: 50px; }
+.navbar {
+	margin-bottom: 0;	
+}
+.navbar-right {
+	float:right;
+	margin-right: 15px;
 }
 
 #doc-logo {
@@ -20,6 +31,16 @@ body {
 
 header {
 	margin-bottom: 10px;
+
+	.page-header {
+		margin: 15px 0 0;
+
+		h1 {
+			margin: 0;
+			font-size: 1.5em;
+			font-weight: normal;
+		}
+	}
 
 	#title {
 		$font-size: 16px;
@@ -47,7 +68,7 @@ header {
 
 	#location {
 		border-bottom: 1px solid gray;
-		padding-bottom: 5px;
+		padding: 5px 0;
 
 		h2 {
 			font-weight: bold;
