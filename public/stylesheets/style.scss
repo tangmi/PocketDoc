@@ -135,6 +135,24 @@ main {
 	}
 
 	.calendar {
+		thead {
+			font-size: 0.69em;
+		}
+		#cal-header {
+			text-align: center;
+			font-size: 1.5em;
+			.center {
+			}
+			.left a, .right a {
+				padding: 5px 10px;
+			}
+			.left {
+				float: left;
+			}
+			.right {
+				float: right;
+			}
+		}
 
 		h3 {
 			text-align: center;
