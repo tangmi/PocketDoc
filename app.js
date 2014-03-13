@@ -40,8 +40,25 @@ app.get('/stylesheets/style.css', function(req, res) {
 	});
 });
 
+app.get('/stylesheets/project.css', function(req, res) {
+	var sass = require('node-sass');
+	res.setHeader('Content-Type', 'text/css');
+	sass.render({
+		file: __dirname + '/public/stylesheets/project.scss',
+		includePaths: [__dirname + '/public/stylesheets'],
+		outputStyle: 'compressed',
+		success: function(css) {
+			res.send(css);
+		}
+	});
+});
+
 app.get('/', function(req, res) {
-	render('login', res);
+	render('home', res);
+});
+
+app.get('/project', function(req, res) {
+	res.render('project');
 });
 
 app.get('/:page', function(req, res) {
@@ -55,11 +72,6 @@ function render(page, res) {
 		title: require('./config')[page],
 		page: page
 	};
-
-	if(!require('fs').existsSync(__dirname + '/views/' + page + '.html')) {
-		res.setHeader('Content-Type', 'text/plain');
-		return res.send('views/' + page + '.html not found');
-	}
 
 	return res.render(
 		'index', {
