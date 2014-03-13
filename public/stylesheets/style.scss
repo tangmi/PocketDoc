@@ -134,6 +134,10 @@ main {
 		font-size: 2em;
 	}
 
+	.record-img {
+		width: 100%;
+	}
+
 	.calendar {
 		thead {
 			font-size: 0.69em;
@@ -173,6 +177,23 @@ main {
 			}
 
 		}
+	}
+
+	.cal-key {
+		font-size: 2em;
+		text-align: center;
+		margin-top: 2px;
+		border: 1px solid #DDD;
+	}
+
+	#available {
+		color: #428BCA;
+		background-color: #D9EDF7;
+	}
+
+	#unavailable {
+		color: #333;
+		opacity: 0.5;
 	}
 
 	td {
