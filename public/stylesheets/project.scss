@@ -1,0 +1,57 @@
+html{
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+iframe {
+	display: block;
+	margin: 15px;
+}
+
+#main-graphic {
+	width: 30%;
+	float: right;
+}
+
+#try-now button {
+	margin: 15px;
+	width: 50%;
+}
+
+nav {
+	background-color: rgba(242, 239, 232, 1);
+	width: 20%;
+	height: 100%;
+	float: left;
+	position: fixed;
+
+	#logo-wrapper {
+		margin: auto;
+		width: intrinsic;
+		text-align: center;
+	}
+
+	li {
+		display: block;
+	}
+}
+
+main {
+	width: 80%;
+	overflow-y: scroll;
+	float: right;
+	padding: 15px;
+
+	.member {
+		width: 22%;
+		margin: 5px;
+		display: inline-block;
+
+		img {
+			width: 100%;
+		}
+	}
+}
