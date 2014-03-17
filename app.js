@@ -54,7 +54,11 @@ app.get('/stylesheets/project.css', function(req, res) {
 });
 
 app.get('/', function(req, res) {
-	render('home', res);
+	res.redirect('/project');
+});
+
+app.get('/proto', function(req, res) {
+	res.render('proto');
 });
 
 app.get('/project', function(req, res) {
